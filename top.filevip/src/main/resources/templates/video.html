@@ -1,0 +1,157 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="vip视频解析,vip视频在线解析,vip解析,万能vip视频解析,vip视频全能解析,vip视频,手机vip视频解析,手机在线解析vip视频,优酷vip解析,爱奇艺vip解析,腾讯vip解析,乐视vip解析,芒果vip解析,vip音乐解析">
+    <meta name="description" content="解析VIP视频免费看，在线解析，vip视频解析，优酷vip解析，爱奇艺vip解析，腾讯vip解析，乐视vip解析，全网影视vip，芒果vip解析方便广大用户VIP视频服务，最新电影最新电视剧在线免费观看">
+    <title>VIP视频网站在线解析</title>
+    <link rel="stylesheet" href="../../css/css.css">
+    <style type="text/css">
+    a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+    </style>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/nosifer:n4:default;monoton:n4:default;butcherman:n4:default.js" type="text/javascript"></script>
+
+</head>
+<body background="../../img/bg.jpg" background-repeat="no-repeat" background-attachment="fixed" oncontextmenu=self.event.returnValue=false>
+    <div id="main">
+        <div class="header">
+            <hr><hr>
+			<br><br>
+			<h2 style="font-size: 35px; color: aliceblue"><hr th:text="${Head}"><cite th:text="${msg}"></cite><hr><br><br><br></h2>
+        </div>
+        <div class="content">
+			<p><font face="楷体" size="+1">所有视频皆收集于网络, 本页面只限测试。不保证所有线路都可以使用！<br>
+            </p><br><br>
+           <div class="pure-form">
+				<fieldset>
+					
+					<select id="sel">	
+					<option value="https://jx.99yyw.com/99/?url=">小七</option>
+					<option value="https://www.8090g.cn/jiexi/?url=">kukan解析</option>
+					</select>
+					<input type="search" id="url" placeholder="  http://">
+					<select id="open">
+						<option value="0"> 新窗口播放</option>
+						<option value="1"> 本窗口播放</option>
+					</select>
+					<button id="play" onclick="play();">点击播放</button>
+				</fieldset>
+			</div>
+		</div>
+        <iframe id="xx" width='100%'></iframe>
+        <div class="footer">
+            <div class="legal pure-g">
+                <div class="pure-u-1 u-sm-1-2">
+					
+                  <p>
+						<br><font face="楷体,">
+                        技术支持: <span style="font-family: nosifer;font-style: normal;font-weight: 400;"><img src="../../img/ss.jpg"></img></span></font>
+                      <br><br>
+                    </p>
+                </div>
+				<div>
+                    <p>
+					
+						<br><span style="font-family: nosifer; font-style: normal; font-weight: 400;">2020 PASA.NET Inc. All rights reserved.</span>
+                         
+                    </p>
+                </div>
+            </div>
+ 
+        </div>
+		
+	<script>
+	 window.onkeydown = window.onkeyup = window.onkeypress = function (event) {
+	    // 判断是否按下F12，F12键码为123
+	    if (event.keyCode === 123) {
+	    	    alert("年轻人 不要太好奇哦。");
+	        event.preventDefault(); // 阻止默认事件行为
+	        window.event.returnValue = false;
+	    }
+	} 
+	
+	
+	var data = [
+		{name:"羡羡",url:"http://jx.drgxj.com/?url="},
+		{name:"哈哈",url:"http://jx.du2.cc/?url="},
+		{name:"火火",url:"http://vip.jlsprh.com/?url="},
+		{name:"66",url:"http://jx.598110.com/?url="},
+
+		];
+	for (var i in  data)
+	{
+		var opt = document.createElement ("option");
+		opt.value = data[i].url;
+		opt.innerText = data[i].name;
+		document.getElementById('sel').appendChild (opt);
+	}
+	
+	function play(){
+		var url = document.getElementById("url").value;
+		if(url.indexOf('http') == -1)
+		{	
+			alert('视频地址不正确哦！注意要加上“http://或https://”哦');return;
+		}
+		var api = document.getElementById("sel").value;
+		var open = document.getElementById("open").value;
+		url = api + url;
+		document.getElementById("xx").src = url;
+		/* switch(open)
+		{
+			case '0':
+				window.open(url);
+				console.log(0);
+				break;
+			case '1':
+				window.location = url;
+				console.log(1);
+				break;
+ 
+		} */
+	}
+	</script>
+
+
+	</div>
+	<div class="language">
+<a class="btn2 btn-outline2" href="//www.le.com/" rel="nofollow" target="_blank">乐视视频</a>
+<a class="btn2 btn-outline2" href="//www.iqiyi.com/" rel="nofollow" target="_blank">奇艺视频</a>
+<a class="btn2 btn-outline2" href="//www.mgtv.com/" rel="nofollow" target="_blank">芒果视频</a>
+<a class="btn2 btn-outline2" href="//www.tudou.com/" rel="nofollow" target="_blank">土豆视频</a></div>
+<div class="language">
+<a class="btn2 btn-outline2" href="//v.qq.com/" rel="nofollow" target="_blank">腾讯视频</a>
+<a class="btn2 btn-outline2" href="//www.youku.com/" rel="nofollow" target="_blank">优酷视频</a>
+<a class="btn2 btn-outline2" href="//tv.sohu.com/" rel="nofollow" target="_blank">搜狐视频</a>
+<a class="btn2 btn-outline2" href="//www.pptv.com/" rel="nofollow" target="_blank">pptv视频</a></div>
+</div>
+</body>
+<div class="foot">
+<font size="3" color="Crimson">免责声明：本站所有视频资源均来自网络。服务器仅展示第三方网站接口页面，并不存储任何视频资源。因此经由本站搜索所产生的任何结果皆不代表本站立场，本站不对其真实合法性以及版权负责，亦不承担任何法律责任</font>
+</div>
+</html>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae48ffd17fd449cef38fe0f1a7708063";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--	
+<div class="sogoutip" style="z-index: 2147483645; visibility: hidden; display: none;"></div><div class="sogoubottom" id="sougou_bottom" style="display: none;"></div><div id="ext_stophi" style="z-index: 2147483647;"><div class="extnoticebg"></div><div class="extnotice"><h2>关闭提示 <a href="http://jiexi.jxyz.site/#" title="关闭提示" id="closenotice" class="closenotice">关闭</a></h2><p id="sogouconfirmtxt"></p>  <a id="sogouconfirm" href="http://jiexi.jxyz.site/#" class="extconfirm">确 认</a> <a id="sogoucancel" href="http://jiexi.jxyz.site/#" class="extconfirm">取 消</a></div></div><div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div><iframe class="sogou_sugg_feedbackquan" frameborder="0" scrolling="no" src="./国内视频网站在线解析接口_files/yun6.html" style="border: none; display: none; height: 84px; width: 100%; z-index: 2147483645; background: transparent;"></iframe>-->
