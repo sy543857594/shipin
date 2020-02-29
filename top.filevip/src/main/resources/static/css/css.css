@@ -1,0 +1,63 @@
+/* CSS Document */
+
+*{
+	font: italic;
+	text-align: center;
+	border: #0018FF;
+	color: aliceblue;
+}
+.header{
+	width: 100%;
+	height: 180px;
+	align-content: center;
+	font-family: 微软雅黑;
+	text-align: center;
+	
+}
+@media (max-width: 1174px){
+}
+#sel,#url,#open,#play{
+	background: #656262;
+	border-radius:8px;
+	font-family: 黑体;
+	width: 180px;
+	height: 30px;
+	text-align: left;
+	font-size: 16px;
+}
+.spig {
+	display: block;
+	width: 130px;
+	height: 170px;
+	position: absolute;
+	bottom: 300px;
+	left: 160px;
+	z-index: 9999;
+}
+#message {
+	line-height:170%;
+	color: #191919;
+	border: 1px solid #c4c4c4;
+	background: #ddd;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	min-height: 1em;
+	padding: 5px;
+	top: -45px;
+	position: absolute;
+	text-align: center;
+	width: auto !important;
+	z-index: 10000;
+	-moz-box-shadow: 0 0 15px #eeeeee;
+	-webkit-box-shadow: 0 0 15px #eeeeee;
+	border-color: #eeeeee;
+	box-shadow: 0 0 15px #eeeeee;
+	outline: none;
+}
+.mumu {
+	width: 130px;
+	height: 170px;
+	cursor: move;
+	background: url(“https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3839775455,858941348&fm=26&gp=0.jpg”) no-repeat;
+}
