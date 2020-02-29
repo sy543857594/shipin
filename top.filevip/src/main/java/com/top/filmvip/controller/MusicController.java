@@ -23,7 +23,7 @@ import com.top.filmvip.util.MusicTools;
 @Controller
 public class MusicController {
 	
-	@RequestMapping("/searchmusic")
+	@RequestMapping("/")
 	public  String  index() {
 		
 		return "index";

@@ -38,6 +38,7 @@
 <link rel="stylesheet" type="text/css" href="http://tool.onlychen.cn/css/style.css">
 </head>
 <body>
+
 	<header class="aim-topbar">
 		<div class="aim-header">
 			<div class="aim-title"><a href="#">小火的工具箱</a></div>
@@ -45,9 +46,10 @@
 			<div class="aim-collapse" id="doc-topbar-collapse">
 				<ul class="aim-topbar-nav">
 					<li class="aim-noset"><a href="#">首页</a></li>
-					<li class="aim-active"><a href="/">音乐解析</a></li>
-					<li class="aim-noset"><a href="/hello">视频解析</a></li>
+					<li class="aim-active"><a href="">音乐解析</a></li>
+					<li class="aim-noset"><a href="/videosearch/vip">视频解析</a></li>
 					<li class="aim-noset"><a href="#">联系我</a></li>
+					<li class="aim-noset"><a href="#">待定</a></li>
 				</ul>
 				<div class="aim-topbar-right">
 					<button class="aim-btn" data-am-modal="{target: '#juanzhu'}">捐助</button>
@@ -55,7 +57,9 @@
 			</div>
 		</div>
 	</header>
-	<p style="text-align: center"><a href="#">其他工具</a></p>
+
+	<p style="text-align: center"><a href="#" id="h1"></a></p>
+	<p style="text-align: center"><a href="/tool/test">其他工具</a></p>
 	<section class="am-g about">
 		<div class="am-u-lg-12 am-padding-vertical">
 			<form id="j-validator" class="am-form am-margin-bottom-lg" method="post">
@@ -162,6 +166,7 @@
 				</div>
 			</form>
 			<div class="am-text-right">
+			    <canvas></canvas>
 				<a class="am-btn am-btn-primary am-round" data-am-modal="{target: '#gzh'}">公众号</a>
 				<a class="am-btn am-btn-primary am-round" href="javascript:void(0)" data-am-modal="{target: '#copr-info'}">免责声明</a>
 				<a class="am-btn am-btn-primary am-round" data-am-modal="{target: '#juanzhu'}">赞助</a>
@@ -203,11 +208,53 @@
 
 </section>
 <span style="display: none;">
+
 </span>
+
+<audio id="myMusic" loop>
+    <source src="./mp3/imy.aac" type="audio/mp3">
+  </audio>
+  
+<script>
+
+window.onload=function starttime(){
+      time(h1,'2020,11,4');     // 在一起的时间
+      //document.getElementById('myMusic').play();
+      ptimer = setTimeout(starttime,1000); // 添加计时器
+}
+
+  function time(obj,futimg){
+      var nowtime = new Date().getTime(); // 现在时间转换为时间戳
+      var futruetime =  new Date(futimg).getTime(); // 未来时间转换为时间戳
+      var msec =futruetime-nowtime; // 毫秒 未来时间-现在时间
+      var time = (msec/1000);  // 毫秒/1000
+      var day = parseInt(time/86400); // 天  24*60*60*1000 
+      var hour = parseInt(time/3600)-24*day;    // 小时 60*60 总小时数-过去的小时数=现在的小时数 
+      var minute = parseInt(time%3600/60); // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
+      var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
+//            console.log(hour+":"+minute+":"+second)
+//            alert(hour)
+      obj.innerHTML="服务器到期时间还剩<br>"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+"<br><span></span>"
+
+      return true;
+  }
+
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ae48ffd17fd449cef38fe0f1a7708063";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 <script src="//cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
 <script src="//cdn.staticfile.org/amazeui/2.3.0/js/amazeui.min.js"></script>
 <script src="//cdn.staticfile.org/aplayer/1.6.0/APlayer.min.js"></script>
 <script src="//cdn.staticfile.org/Base64/1.0.1/base64.min.js"></script>
 <script src="./js/music.js?v1.6.2"></script>
+
 </body>
 </html>

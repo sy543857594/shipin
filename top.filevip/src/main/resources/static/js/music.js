@@ -37,6 +37,7 @@ $(function() {
   // 获取 url
   function getUrl(path) {
     var url = location.href.split('?')[0];
+    url=window.origin+"/searchmusic";
     return path ? url + path : url;
   }
 
@@ -140,6 +141,7 @@ $(function() {
       $alert.html(msg).show();
     },
     submit: function submit(v) {
+    
       v.preventDefault();
       if (this.isFormValid()) {
         var input = $.trim($('#j-input').val());
