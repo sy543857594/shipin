@@ -27,18 +27,38 @@ public class MusicTools {
 		      	  body.add(entry.getKey(), entry.getValue()); 
 		      }
 		     
-		      String  html= HttpPost(body,headers);
+		      String  html= HttpPost(body,headers,MUSIC_URL);
 		      return html;
 		
 	}
 	
-	public static String HttpPost( LinkedMultiValueMap<String,Object> body ,   HttpHeaders headers) {
+
+	public static String HttpPost( LinkedMultiValueMap<String,Object> body ,   HttpHeaders headers,String url) {
 		
 		  RestTemplate restTemplate = new RestTemplate();     // 调用 springboot rest模版
 		  HttpEntity httpEntity = new HttpEntity(body, (MultiValueMap)headers);
-	      ResponseEntity<String> strbody = restTemplate.exchange(MUSIC_URL, HttpMethod.POST, httpEntity, String.class, new Object[0]);
+	      ResponseEntity<String> strbody = restTemplate.exchange(url, HttpMethod.POST, httpEntity, String.class, new Object[0]);
 		  return strbody.getBody();
 	}
+	
+	
+	public String searchQQmusic( LinkedMultiValueMap<String,Object> body ,   HttpHeaders headers,String url) {
+		
+		return HttpGet(body, headers, url);
+	}
+	
+	public static String HttpGet( LinkedMultiValueMap<String,Object> body ,   HttpHeaders headers,String url) {
+		
+		  RestTemplate restTemplate = new RestTemplate();     // 调用 springboot rest模版
+		  HttpEntity httpEntity = new HttpEntity(body, (MultiValueMap)headers);
+	      ResponseEntity<String> strbody = restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class, new Object[0]);
+		  return strbody.getBody();
+	}
+	
+	
+		     
+		 
+		   
 	
 	
 }

@@ -14,6 +14,7 @@ public class DealErro implements ErrorPageRegistrar { //处理错误页面
 		 ErrorPage error404Page = new ErrorPage(HttpStatus.METHOD_NOT_ALLOWED, "/");
           
 		 registry.addErrorPages(error404Page);
+		 
 	}
 
 }
