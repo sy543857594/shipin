@@ -11,7 +11,9 @@ public class ToolsController {
 	@RequestMapping("/test")
 	public String index() {
 
+		System.out.println("xxx");
 		return "sextest";
+		
 	}
 
 	

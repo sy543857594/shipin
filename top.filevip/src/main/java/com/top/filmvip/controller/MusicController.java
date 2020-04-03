@@ -27,7 +27,7 @@ public class MusicController {
 	public  String  queryMusicList(@RequestParam Map<String, String> mapParam) {
           Map<String,Object> map = new HashMap<String, Object>();
           HttpHeaders headers=new  HttpHeaders();
-          System.out.println(mapParam);
+          //System.out.println(mapParam);
 		  map.put("input", mapParam.get("input"));  
 	      map.put("filter", mapParam.get("filter"));
 	      map.put("page", mapParam.get("page"));
